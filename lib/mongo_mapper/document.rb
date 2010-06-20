@@ -6,7 +6,7 @@ module MongoMapper
     def self.included(model)
       model.class_eval do
         extend  Plugins
-        plugin Plugins::ActiveModel
+        plugin Plugins::ActiveModelSupport
         plugin Plugins::Document
         plugin Plugins::Querying # for now needs to be before associations (save_to_collection)
         plugin Plugins::Associations
