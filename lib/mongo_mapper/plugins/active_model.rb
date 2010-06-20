@@ -8,7 +8,7 @@ module MongoMapper
           include ActiveModel::Naming
           include ActiveModel::Serialization
           include ActiveModel::Serializers::JSON
-          extend ActiveModel::Translation
+          model.extend ActiveModel::Translation  if defined?(ActiveModel)
         end
       end
     end
