@@ -6,7 +6,7 @@ module MongoMapper
     def self.included(model)
       model.class_eval do
         extend  Plugins
-
+        plugin Plugins::ActiveModel
         plugin Plugins::EmbeddedDocument
         plugin Plugins::Associations
         plugin Plugins::Caching
