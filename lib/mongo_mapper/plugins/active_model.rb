@@ -1,6 +1,6 @@
 module MongoMapper
   module Plugins
-    module Validations
+    module ActiveModel
       def self.configure(model)
         model.class_eval do
           include ActiveModel::Serializers::Xml
